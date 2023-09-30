@@ -9,6 +9,12 @@ export default {
       fontFamily:{
         "staatliches": "'Staatliches', cursive",
       },
+      width:{
+        84: "22rem",
+      },
+      height:{
+        84: "22rem",
+      },
     },
   },
   plugins: [],
