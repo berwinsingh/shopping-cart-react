@@ -3,6 +3,11 @@ import { IoCartOutline } from "react-icons/io5";
 import "../../styles/game-card.css";
 
 const GameCard = (props) => {
+
+  // const addToCart = ()=>{
+    
+  // }
+
   return (
     <>
       <div

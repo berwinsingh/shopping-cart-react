@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import GameCard from "../home/game-card";
 import PropTypes from "prop-types";
+import CartData from "../cart/cart-data";
 
 const GameData = (props) => {
   const [game, setGame] = useState([]);
@@ -31,6 +32,7 @@ const GameData = (props) => {
               releaseDate={game.released}
               addToCart={props.addToCart}
               viewItemHandler={props.productPage}
+              price={69.99}
             />
           </>
         ))}

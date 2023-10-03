@@ -1,0 +1,10 @@
+/* #cart-side-peek{
+    left: 82.5%;
+    top: 0px;
+    backdrop-filter: blur(10px);
+    opacity: 95%;
+    background-color: #00C2D7;
+    border: 1px solid black;
+    border-radius: 5px 0 0 5px;
+    transition: ease-in-out;
+} */
