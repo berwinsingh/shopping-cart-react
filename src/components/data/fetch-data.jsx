@@ -1,17 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, React } from "react";
 import GameCard from "../home/game-card";
 import PropTypes from "prop-types";
-import CartData from "../cart/cart-data";
 
 const GameData = (props) => {
   const [game, setGame] = useState([]);
+  const [cart, setCart] = useState([]);
 
-  const apiKey = "cc4bf61aa0b149e29040c304202d1a55";
+  const apiKey = "2d20f776def34acc801a1c96f4a09dc7";
   const url = `https://api.rawg.io/api/games?key=${apiKey}`;
+
+  const addToCart = (game) => {
+    setCart(prev => [...prev, game]);
+  }
+
+  useEffect(()=>{
+    console.log(cart);
+  },[cart])
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch(url);
+      const response = await fetch(`${url}`, {
+        mode: "cors",
+        method: "GET",
+      });
       const data = await response.json();
       setGame(data.results);
     };
@@ -29,8 +40,8 @@ const GameData = (props) => {
               id={game.id}
               gameName={game.name}
               image={game.background_image}
+              addToCart={()=>addToCart(game)}
               releaseDate={game.released}
-              addToCart={props.addToCart}
               viewItemHandler={props.productPage}
               price={69.99}
             />
@@ -45,5 +56,6 @@ GameData.propTypes = {
   addToCart: PropTypes.func,
   productPage: PropTypes.func,
 };
+
 
 export default GameData;

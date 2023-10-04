@@ -1,12 +1,8 @@
+import CartContext from "../../cart-context";
 import "../../styles/cart.css";
-// import PropTypes from "prop-types";
-import CartProduct from "./cart-product";
-import CartData from "./cart-data";
 import { useState } from "react";
 
 const Cart = () => {
-    const [myCart, setMyCart] = useState(CartData);
-
   return (
     <>
       <h2 className="p-5 font-staatliches text-4xl">My Cart</h2>

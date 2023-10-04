@@ -4,6 +4,7 @@ import Home from './components/home/home-page'
 import ProductPage from './components/home/product-page'
 import Navbar from './components/navigation/navbar'
 import Cart from './components/cart/cart'
+import { useState } from 'react'
 
 function App() {
   return (

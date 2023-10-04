@@ -3,16 +3,11 @@ import { IoCartOutline } from "react-icons/io5";
 import "../../styles/game-card.css";
 
 const GameCard = (props) => {
-
-  // const addToCart = ()=>{
-    
-  // }
-
   return (
     <>
       <div
         onClick={props.viewItemHandler}
-        className="mt-2 bg-white flex flex-col drop-shadow-md rounded-xl h-84 w-84 cursor-pointer"
+        className="game-card mt-2 bg-white flex flex-col drop-shadow-md rounded-xl h-84 w-84 cursor-pointer"
         key={props.id}
       >
         <div
