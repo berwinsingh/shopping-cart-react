@@ -1,4 +1,3 @@
-import CartContext from "../../cart-context";
 import "../../styles/cart.css";
 import { useState } from "react";
 
